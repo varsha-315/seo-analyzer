@@ -1,23 +1,14 @@
-const puppeteer = require("puppeteer");
+const axios = require("axios");
 
 const crawlWebsite = async (url) => {
+  const response = await axios.get(url, {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138 Safari/537.36",
+    },
+  });
 
-    const browser = await puppeteer.launch({
-        headless: true
-    });
-
-    const page = await browser.newPage();
-
-    await page.goto(url, {
-        waitUntil: "networkidle2"
-    });
-
-    const html = await page.content();
-
-    await browser.close();
-
-    return html;
-
+  return response.data;
 };
 
 module.exports = crawlWebsite;
