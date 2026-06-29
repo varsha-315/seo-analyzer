@@ -16,7 +16,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/reports"
+        "https://seo-analyzer-gikv.onrender.com/api/reports"
       );
 
       const data = await response.json();
@@ -56,7 +56,7 @@ function App() {
 
       const response = await fetch(
 
-        "http://localhost:5000/api/analyze",
+        "https://seo-analyzer-gikv.onrender.com/api/reports",
 
         {
 
