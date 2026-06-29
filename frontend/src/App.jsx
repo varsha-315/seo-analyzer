@@ -16,8 +16,8 @@ function App() {
     try {
 
       const response = await fetch(
-        "https://seo-analyzer-gikv.onrender.com/api/reports"
-      );
+    "https://seo-analyzer-gikv.onrender.com/api/reports"
+);
 
       const data = await response.json();
 
@@ -55,29 +55,17 @@ function App() {
 
 
       const response = await fetch(
-
-        "https://seo-analyzer-gikv.onrender.com/api/reports",
-
-        {
-
-          method: "POST",
-
-          headers: {
-
+    "https://seo-analyzer-gikv.onrender.com/api/analyze",
+    {
+        method: "POST",
+        headers: {
             "Content-Type": "application/json"
-
-          },
-
-          body: JSON.stringify({
-
+        },
+        body: JSON.stringify({
             url
-
-          })
-
-        }
-
-      );
-
+        })
+    }
+);
 
 
       const data = await response.json();
