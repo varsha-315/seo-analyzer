@@ -1,4 +1,6 @@
 const runLighthouse = async (url) => {
+  console.log("✅ NEW LIGHTHOUSE FILE IS RUNNING");
+
   return {
     performance: 0,
     accessibility: 0,
